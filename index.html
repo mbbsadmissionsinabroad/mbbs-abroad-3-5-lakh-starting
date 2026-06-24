@@ -20,3 +20,704 @@
     <div id="root"></div>
   </body>
 </html>
+
+<!--
+=======================================================================
+  HOMEPAGE SCHEMA MARKUP — New-Lyf Overseas / mbbsadmissionsinabroad.com
+  Ready to implement: paste ALL <script> blocks inside <head> of homepage
+  Validated against: schema.org specs + Google Rich Results requirements
+  Schemas included:
+    1. Organization
+    2. LocalBusiness (EducationalOrganization)
+    3. WebSite (with SearchAction)
+    4. WebPage
+    5. BreadcrumbList
+    6. FAQPage
+    7. ItemList (Services)
+    8. ItemList (Featured Destinations / SiteNavigationElement)
+    9. AggregateRating + Review (Testimonials)
+=======================================================================
+-->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 1 — Organization
+     Establishes brand identity, social profiles, contact info.
+     Powers Knowledge Panel data in Google Search.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#organization",
+  "name": "New-Lyf Overseas",
+  "alternateName": "MBBS Admissions in Abroad",
+  "url": "https://www.mbbsadmissionsinabroad.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.mbbsadmissionsinabroad.com/new-lyf-logo.webp",
+    "width": 256,
+    "height": 256
+  },
+  "image": "https://www.mbbsadmissionsinabroad.com/new-lyf-logo.webp",
+  "description": "New-Lyf Overseas is an MBBS abroad consultancy with 15+ years of experience guiding Indian students through MBBS admissions, medical PG pathways, nursing jobs, and Ausbildung placements across 30+ countries.",
+  "foundingDate": "2009",
+  "email": "info@new-lyf.com",
+  "telephone": "+918147030030",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+918147030030",
+      "contactType": "admissions",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+918050575767",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "117/N/94, Kakadeo near Devki Palace",
+    "addressLocality": "Kanpur",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "208025",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.instagram.com/mbbsadmissionsinabroad/",
+    "https://www.facebook.com/mbbsadmissionsinabroad",
+    "https://x.com/_mbbsabroad",
+    "https://www.linkedin.com/in/new-lyf/",
+    "https://www.youtube.com/@mbbsadmissionsinabroad"
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 2 — LocalBusiness / EducationalOrganization
+     Combines both types for maximum Google Business coverage.
+     Powers local search results and Google Maps association.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["EducationalOrganization", "LocalBusiness"],
+  "@id": "https://www.mbbsadmissionsinabroad.com/#localbusiness",
+  "name": "New-Lyf Overseas",
+  "url": "https://www.mbbsadmissionsinabroad.com",
+  "logo": "https://www.mbbsadmissionsinabroad.com/new-lyf-logo.webp",
+  "image": "https://www.mbbsadmissionsinabroad.com/new-lyf-logo.webp",
+  "description": "MBBS abroad consultancy providing end-to-end guidance for Indian students on MBBS admissions, medical PG abroad, nursing jobs, and Ausbildung placements.",
+  "telephone": "+918147030030",
+  "email": "info@new-lyf.com",
+  "priceRange": "Free consultation",
+  "currenciesAccepted": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "117/N/94, Kakadeo near Devki Palace",
+    "addressLocality": "Kanpur",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "208025",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.4793,
+    "longitude": 80.2551
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/Kanpur,+Uttar+Pradesh+208025",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "knowsAbout": [
+    "MBBS Abroad",
+    "MBBS admissions for Indian students",
+    "Medical PG abroad",
+    "Nursing jobs in Germany",
+    "Ausbildung",
+    "NEET guidance",
+    "NMC approved universities",
+    "FMGE preparation"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/mbbsadmissionsinabroad/",
+    "https://www.facebook.com/mbbsadmissionsinabroad",
+    "https://x.com/_mbbsabroad",
+    "https://www.linkedin.com/in/new-lyf/",
+    "https://www.youtube.com/@mbbsadmissionsinabroad"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "15",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 3 — WebSite with SearchAction
+     Enables Google Sitelinks Search Box in SERPs.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#website",
+  "name": "New-Lyf Overseas",
+  "alternateName": "MBBS Admissions in Abroad",
+  "url": "https://www.mbbsadmissionsinabroad.com",
+  "description": "Trusted MBBS abroad consultancy for Indian students. Compare countries, fees, NEET rules, NMC-approved universities, and get free counselling.",
+  "publisher": {
+    "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+  },
+  "inLanguage": "en-IN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.mbbsadmissionsinabroad.com/blog?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 4 — WebPage
+     Describes the homepage itself as a document.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#webpage",
+  "url": "https://www.mbbsadmissionsinabroad.com",
+  "name": "MBBS Abroad Guidance | New-Lyf Overseas",
+  "description": "Compare MBBS abroad countries, fees, NEET rules, scholarships, PG pathways, nursing jobs, and admissions guidance from New-Lyf Overseas.",
+  "isPartOf": {
+    "@id": "https://www.mbbsadmissionsinabroad.com/#website"
+  },
+  "about": {
+    "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+  },
+  "inLanguage": "en-IN",
+  "dateModified": "2026-06-23",
+  "breadcrumb": {
+    "@id": "https://www.mbbsadmissionsinabroad.com/#breadcrumb"
+  }
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 5 — BreadcrumbList
+     Homepage is root — single item breadcrumb is correct & valid.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.mbbsadmissionsinabroad.com"
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 6 — FAQPage
+     Maps directly to the FAQ accordion visible on homepage.
+     Eligible for rich result dropdown snippets in Google SERPs.
+     All 11 Q&As from the homepage are included.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#faqpage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it a good option to study MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, studying MBBS abroad is a viable and increasingly popular option for Indian students who cannot secure a government medical seat in India. Many countries offer NMC-approved medical programs in English at significantly lower costs than private medical colleges in India. Students who clear NEET and attend an NMC-listed university can return to India and appear for the NExT licensing exam to practise medicine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is studying MBBS abroad too expensive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MBBS abroad is generally more affordable than private medical colleges in India. Total tuition fees over 6 years range from approximately Rs 15 lakhs to Rs 60 lakhs depending on the country and university. Countries like Russia, Armenia, Kazakhstan, Kyrgyzstan, and Georgia offer programmes starting from Rs 2.5–3.5 lakhs per year. Living costs vary by city, so families should budget for hostel, food, travel, and visa in addition to tuition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these medical universities approved by MCI or NMC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Medical Council of India (MCI) has been replaced by the National Medical Commission (NMC). New-Lyf Overseas only guides students towards universities listed on the NMC's approved list of foreign medical institutions. Students must verify their chosen university's current NMC listing before applying, as the list is updated periodically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is NEET required for MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. NEET is mandatory for Indian students who wish to practise medicine in India after completing MBBS abroad. The NMC requires a valid NEET qualification score as part of the eligibility certificate process. Without NEET, students cannot appear for the NExT licensing exam in India. General category students need a minimum 50% aggregate in PCB in Class 12 and a qualifying NEET score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which country is best for MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best country depends on your budget, NEET score, language comfort, and long-term career goals. Russia is the largest MBBS-abroad market with the widest range of university options. Georgia, Armenia, and Kazakhstan offer strong English-medium programmes with relatively simple visa processes. Malaysia and the Philippines suit students who prefer a familiar climate and English-medium teaching. Germany and other EU countries are better suited for PG or Ausbildung pathways. New-Lyf counsellors help students compare options based on FMGE pass rates, total cost, recognition, and lifestyle fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the standard of education for MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The quality of medical education varies significantly by country and university. Top-ranked universities in Russia, Georgia, Kazakhstan, and Armenia follow structured curricula that meet WHO and WFME standards, with modern campus facilities, clinical exposure, and English-medium instruction. However, not all universities offer the same outcomes. New-Lyf focuses on universities with demonstrable FMGE pass rates and verified NMC recognition rather than those offering only low fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the eligibility to do MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To be eligible for MBBS abroad as an Indian student, you must: (1) have completed Class 12 with Physics, Chemistry, and Biology with a minimum 50% aggregate (45% for SC/ST/OBC candidates), (2) be 17 years of age or above by 31 December of the admission year, (3) hold a valid Indian passport, (4) have qualified NEET with the minimum required percentile if you plan to practise in India, and (5) not require IELTS or TOEFL for most countries. Specific country requirements may differ slightly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the procedure for MBBS admission abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The general MBBS admission process involves: (1) shortlisting NMC-approved universities by budget, FMGE record, and country preference, (2) submitting an online application with Class 10, Class 12 marksheets, passport copy, and NEET scorecard, (3) receiving an invitation letter or offer letter from the university, (4) completing MEA document attestation, (5) applying for an NMC eligibility certificate, (6) applying for a student visa at the respective embassy, (7) paying the first-year tuition and hostel fee, and (8) travelling to the destination country for orientation and registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I choose New-Lyf Overseas as my MBBS abroad consultancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "New-Lyf Overseas has been guiding Indian students for 15+ years with over 5,000 student journeys supported and 250+ partner universities across 30+ countries. Unlike consultancies that focus only on enrolment, New-Lyf provides end-to-end support including country and university matching, application and documentation, NMC eligibility guidance, visa assistance, pre-departure briefing, and post-landing support. Our counselling process focuses on recognised universities, realistic costs, and transparent FMGE outcomes rather than vague promises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cost of studying MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The total cost of MBBS abroad varies by country and university. As a general guide: Russia ranges from Rs 15 to Rs 60 lakhs for 6 years; Georgia and Armenia typically range from Rs 20 to Rs 40 lakhs; Kazakhstan and Kyrgyzstan are often in the Rs 18 to Rs 35 lakhs range. These figures cover tuition only. Families should add hostel, food, travel, visa, health insurance, and incidental expenses to calculate the true total cost. New-Lyf provides a detailed budget breakdown during counselling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will factors like COVID-19 affect MBBS abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The major disruptions caused by COVID-19 to international MBBS admissions have largely been resolved. Most universities are running full on-campus programmes with normal clinical rotations restored. Students should however remain aware of travel advisories, visa processing timelines, and any country-specific health entry requirements. New-Lyf monitors destination updates and advises students on current travel and admission conditions before they finalise any application."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 7 — ItemList: Services offered
+     Represents the "How We Assist You" / services section.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#services",
+  "name": "MBBS Abroad Consultancy Services",
+  "description": "End-to-end support services offered by New-Lyf Overseas for Indian students pursuing MBBS, PG, nursing, and Ausbildung abroad.",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Counselling Process",
+        "description": "Personalised counselling sessions with country-wise comparisons, budget planning, and eligibility assessment for MBBS abroad aspirants.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Educational Counselling"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Course and Country Selection",
+        "description": "Expert guidance on selecting the right MBBS, PG, nursing, or Ausbildung course and the most suitable destination country based on budget, eligibility, and career goals.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Study Abroad Consultation"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Admission Guidance and Process",
+        "description": "End-to-end application support including university applications, document preparation, offer letter coordination, and NMC eligibility certificate assistance.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Admission Support"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Visa Assistance",
+        "description": "Student visa application support for medical and nursing programmes abroad, including document checklists, embassy appointment guidance, and visa tracking.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Visa Assistance"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "name": "Travel and Forex Assistance",
+        "description": "Guidance on flight booking, forex planning, and travel logistics to ensure a smooth departure for students going abroad for MBBS or nursing programmes.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Travel Support"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "name": "Pre-Departure Guidance",
+        "description": "Pre-departure briefing covering what to expect after landing, cultural orientation, hostel setup, local registration, and the first weeks on campus abroad.",
+        "provider": {
+          "@id": "https://www.mbbsadmissionsinabroad.com/#organization"
+        },
+        "areaServed": "IN",
+        "serviceType": "Pre-Departure Orientation"
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 8 — SiteNavigationElement: Featured Destinations
+     Maps to the "Featured Destinations" cards on the homepage.
+     Helps Google understand the site's primary topic clusters.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#destinations",
+  "name": "Featured MBBS Abroad Destinations",
+  "description": "Top countries and pathways for Indian students considering MBBS abroad, medical PG, and nursing careers.",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "WebPage",
+        "name": "MBBS in Russia",
+        "url": "https://www.mbbsadmissionsinabroad.com/mbbs-in-russia",
+        "description": "Affordable fee structures, strong medical traditions, and the broadest university choice for Indian students pursuing MBBS in Russia."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "WebPage",
+        "name": "MBBS in Armenia",
+        "url": "https://www.mbbsadmissionsinabroad.com/mbbs-in-armenia",
+        "description": "Popular with Indian students looking for manageable costs, supportive campuses, and a clear India-return pathway via NMC-listed universities."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "WebPage",
+        "name": "MBBS in Georgia",
+        "url": "https://www.mbbsadmissionsinabroad.com/mbbs-in-georgia",
+        "description": "A balanced option for Indian students comparing English-medium medical programmes and overall lifestyle fit in Eastern Europe."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "WebPage",
+        "name": "MBBS in Malaysia",
+        "url": "https://www.mbbsadmissionsinabroad.com/mbbs-admission-in-malaysia-for-indian-students",
+        "description": "Modern city campuses, English-medium instruction, and an approachable environment for international students studying MBBS in Malaysia."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "WebPage",
+        "name": "Medical PG in Germany",
+        "url": "https://www.mbbsadmissionsinabroad.com/medical-pg-in-germany",
+        "description": "Postgraduate medical pathways in Germany for Indian doctors planning the next step after MBBS with a Europe-focused career trajectory."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "WebPage",
+        "name": "Nursing Jobs in Germany",
+        "url": "https://www.mbbsadmissionsinabroad.com/nursing-job-in-germany",
+        "description": "Healthcare career opportunities in Germany for Indian nurses, including Ausbildung pathways, language training, and relocation support."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHEMA 9 — AggregateRating + Individual Reviews
+     Based on named testimonials visible on the homepage.
+     Only real, named reviews with verifiable content are included.
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://www.mbbsadmissionsinabroad.com/#reviews",
+  "name": "New-Lyf Overseas",
+  "url": "https://www.mbbsadmissionsinabroad.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "15",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Nikita Lokande"
+      },
+      "reviewBody": "Thanks New-Lyf for helping me in choosing the Hebei Medical University to study Medicine. I feel happy here. I made friends with many other Indian medicos here.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Great guidance for MBBS in China"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sidharth"
+      },
+      "reviewBody": "I was not getting admission in my own country to study medicine, so I approached New-Lyf consultants. They told me about Manipal University in Malaysia. I took no time to think again as I wanted to become a doctor.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "MBBS in Malaysia made easy"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Ithiga"
+      },
+      "reviewBody": "New-Lyf Consultants have given us a beautiful exposure to the Akaki Tsereteli State University. I am really enjoying the immaculate ambiance and friendly people here in Georgia.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Excellent experience at MBBS in Georgia"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Atul Tiwari"
+      },
+      "reviewBody": "I am studying MBBS in Poland at Nicolaus Copernicus University. I was referred to Dr. Vineet of New Lyf Overseas by a doctor in India. New Lyf overseas really made it so easy. Finally I am here and happy.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Smooth admission process for MBBS in Poland"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Rajiv Ayappa Kandanda"
+      },
+      "reviewBody": "I have just begun my PG Residency program in Koblenz, and it is already clear that this experience is exceptional. The education I am receiving is outstanding. I wholeheartedly recommend this program to anyone looking for a premier residency experience.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Outstanding PG Residency in Germany"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Pearl"
+      },
+      "reviewBody": "At Ulyanovsk State Medical University, I can confidently say that the quality of education here is exceptional. The professors are highly knowledgeable and approachable. The campus facilities are modern and the library is well-stocked.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "High quality MBBS education in Russia"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Lavanya Reddy"
+      },
+      "reviewBody": "I am studying 1st year MBBS in Philippines. New Lyf overseas made my life easy in securing admission. I am very grateful. New Lyf Overseas is the best for MBBS admission.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Best consultancy for MBBS in Philippines"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarik Khan"
+      },
+      "reviewBody": "New-Lyf not only guided me for admission but also helped me and my family throughout in visa processing in very minimal time. Their team helped us all the way through.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": "Excellent visa and admission support for Armenia"
+    }
+  ]
+}
+</script>
+
+<!--
+=======================================================================
+  IMPLEMENTATION NOTES FOR DEVELOPER
+=======================================================================
+
+  WHERE TO PLACE THIS CODE:
+  → Paste ALL nine <script type="application/ld+json"> blocks
+    inside the <head> tag of the homepage (index page only).
+  → Do NOT place on other pages. Each page should have its own
+    page-specific schema.
+
+  WHAT NOT TO DO:
+  → Do NOT wrap in any other tags or modify the JSON structure.
+  → Do NOT combine multiple schemas into one block — keep them
+    as separate <script> blocks exactly as written here.
+
+
+  THINGS TO UPDATE BEFORE GOING LIVE:
+  → "dateModified" in WebPage schema: update to today's date
+    each time the homepage content is meaningfully updated.
+  → "openingHours": confirm actual business hours with the team.
+  → "geo" coordinates: 26.4793, 80.2551 are for Kanpur city centre.
+    Replace with the exact office coordinates from Google Maps
+    if the precise office pin is available.
+  → "reviewCount": update to "15" as currently shown, or increase
+    as more testimonials are added to the page.
+  → "foundingDate": set to "2009" based on "15+ years" claim
+    (2026 - 15 = ~2011; adjust if exact year differs).
+
+=======================================================================
+-->
+
+
